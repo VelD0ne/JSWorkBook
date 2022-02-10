@@ -118,7 +118,7 @@ let obj = Object.fromEntries(map); // make a plain object (*)
 // done!
 // obj = { banana: 1, orange: 2, meat: 4 }
 
-alert(obj.orange); // 2
+console.log(obj.orange); // 2
 
 
 
@@ -151,23 +151,26 @@ set.add(john);
 set.add(mary);
 
 // set keeps only unique values
-alert( set.size ); // 3
+console.log( set.size ); // 3
 
 for (let user of set) {
-  alert(user.name); // John (then Pete and Mary)
+  console.log(user.name); // John (then Pete and Mary)
 }
 
 
 
 let set = new Set(["oranges", "apples", "bananas"]);
 
-for (let value of set) alert(value);
+for (let value of set) console.log(value);
 
 // the same with forEach:
 set.forEach((value, valueAgain, set) => {
-  alert(value);
+  console.log(value);
 });
 
 
 
 
+// set.keys() – returns an iterable object for values,
+// set.values() – same as set.keys(), for compatibility with Map,
+// set.entries() – returns an iterable object for entries [value, value], exists for compatibility with Map.

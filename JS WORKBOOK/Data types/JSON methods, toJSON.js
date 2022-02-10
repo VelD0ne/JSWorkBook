@@ -17,7 +17,7 @@ let user = {
     }
   };
   
-  alert( JSON.stringify(meetup) );
+  console.log( JSON.stringify(meetup) );
   /* The whole structure is stringified:
   {
     "title":"Conference",
@@ -37,7 +37,7 @@ let user = {
   
   room.occupiedBy = meetup; // room references meetup
   
-  alert( JSON.stringify(meetup, ['title', 'participants', 'place', 'name', 'number']) );
+  console.log( JSON.stringify(meetup, ['title', 'participants', 'place', 'name', 'number']) );
   /*
   {
     "title":"Conference",
@@ -61,8 +61,8 @@ let user = {
   
   room.occupiedBy = meetup; // room references meetup
   
-  alert( JSON.stringify(meetup, function replacer(key, value) {
-    alert(`${key}: ${value}`);
+  console.log( JSON.stringify(meetup, function replacer(key, value) {
+    console.log(`${key}: ${value}`);
     return (key == 'occupiedBy') ? undefined : value;
   }));
   
@@ -90,7 +90,7 @@ let user = {
     }
   };
   
-  alert(JSON.stringify(user, null, 2));
+  console.log(JSON.stringify(user, null, 2));
   /* two-space indents:
   {
     "name": "John",
@@ -126,9 +126,9 @@ let user = {
     room
   };
   
-  alert( JSON.stringify(room) ); // 23
+  console.log( JSON.stringify(room) ); // 23
   
-  alert( JSON.stringify(meetup) );
+  console.log( JSON.stringify(meetup) );
   /*
     {
       "title":"Conference",
@@ -145,7 +145,7 @@ let user = {
 
 let user = JSON.parse(userData);
 
-alert( user.friends[1] ); // 1
+console.log( user.friends[1] ); // 1
 
 
 
@@ -158,4 +158,4 @@ let meetup = JSON.parse(str, function(key, value) {
   return value;
 });
 
-alert( meetup.date.getDate() ); // now works!
+console.log( meetup.date.getDate() ); // now works!

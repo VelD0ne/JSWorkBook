@@ -85,7 +85,7 @@ let result2 = process(obj); // remembered result taken from cache
 // ...later, when the object is not needed any more:
 obj = null;
 
-alert(cache.size); // 1 (Ouch! The object is still in cache, taking memory!)
+console.log(cache.size); // 1 (Ouch! The object is still in cache, taking memory!)
 
 
 
@@ -133,10 +133,10 @@ visitedSet.add(john); // John again
 // visitedSet has 2 users now
 
 // check if John visited?
-alert(visitedSet.has(john)); // true
+console.log(visitedSet.has(john)); // true
 
 // check if Mary visited?
-alert(visitedSet.has(mary)); // false
+console.log(visitedSet.has(mary)); // false
 
 john = null;
 
