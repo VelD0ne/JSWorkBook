@@ -20,7 +20,7 @@ user = {
 user = {
 
     sayHi() { // same as "sayHi: function(){...}"
-        console.log("Hello " + this.name || "me"); //Question for an expert ??
+        console.log("Hello " + this.name || "me"); // for an expert ??
     }
 };
 

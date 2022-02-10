@@ -12,12 +12,12 @@ let b = a; // copy the reference
 console.log(a == b); // true, both variables reference the same object
 console.log(a === b); // true
 
-let a = {};
-let b = {}; // two independent objects
+a = {};
+b = {}; // two independent objects
 
 console.log(a == b); // false
 
-let user = { name: "John" };
+user = { name: "John" };
 
 let permissions1 = { canView: true };
 let permissions2 = { canEdit: true };
@@ -27,7 +27,7 @@ Object.assign(user, permissions1, permissions2);
 
 // now user = { name: "John", canView: true, canEdit: true }
 
-let user = {
+user = {
     name: "John",
     age: 30
 };
@@ -45,9 +45,9 @@ clone.name = "Pete"; // changed the data in it
 console.log(user.name); // still John in the original object
 
 //or
-let user = {
+user = {
     name: "John",
     age: 30
 };
 
-let clone = Object.assign({}, user);
+clone = Object.assign({}, user);
