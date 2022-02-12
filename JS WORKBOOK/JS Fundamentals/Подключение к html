@@ -5,13 +5,13 @@
 
 <body>
 
-  <p>Перед скриптом...</p>
+  <p>Before scriot...</p>
 
   <script>
-    alert( 'Привет, мир!' );
+    alert( 'Hello World!' );
   </script>
 
-  <p>...После скрипта.</p>
+  <p>...After <script></script>.</p>
 
 </body>
 
@@ -20,9 +20,9 @@
 
 
 
-<script type="text/javascript"><!--
-    ...
-//--></script>
+<script type="text/javascript">
+    // ...
+</script>
 
 
 

@@ -1,5 +1,5 @@
 //Nan null undefined 0 "" - false
-let message = "Danik is genius";
+message = "Danik is genius";
 if (message)
     console.log(`This message is true - ${message}`);
 else

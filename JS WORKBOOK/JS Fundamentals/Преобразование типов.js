@@ -11,14 +11,14 @@ console.log(typeof value);
 
 console.log( "6" / "2" ); // 3, строки преобразуются в числа
 
-let str = "123";
+str = "123";
 console.log(typeof str); // string
 
 let num = Number(str); // становится числом 123
 
 console.log(typeof num); // number
 
-let age = Number("Любая строка вместо числа");
+age = Number("Любая строка вместо числа");
 
 console.log(age); // NaN, преобразование не удалось
 
