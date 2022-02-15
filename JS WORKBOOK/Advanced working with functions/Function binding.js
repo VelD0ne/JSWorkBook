@@ -10,7 +10,7 @@ let user = {
 
 
 
-  let user = {
+  user = {
     firstName: "John",
     sayHi() {
       console.log(`Hello, ${this.firstName}!`);
@@ -25,7 +25,7 @@ let user = {
 
 
 
-let user = {
+user = {
     firstName: "John"
   };
   
@@ -37,7 +37,7 @@ let user = {
   funcUser(); // John
 
 
-  let user = {
+  user = {
     firstName: "John",
     sayHi() {
       console.log(`Hello, ${this.firstName}!`);
@@ -87,7 +87,7 @@ let user = {
   }
   
   // Usage:
-  let user = {
+  user = {
     firstName: "John",
     say(time, phrase) {
       console.log(`[${time}] ${this.firstName}: ${phrase}!`);

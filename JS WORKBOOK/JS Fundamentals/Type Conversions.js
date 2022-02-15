@@ -1,15 +1,15 @@
 //String Conversion
 
-let value=true;
+let value = true;
 console.log(typeof value);
 
-value=String(value);
+value = String(value);
 console.log(typeof value);
 
 
 //Numeric Conversion
 
-console.log( "6" / "2" ); // 3, strings are converted to numbers
+console.log("6" / "2"); // 3, strings are converted to numbers
 
 str = "123";
 console.log(typeof str); // string
@@ -22,10 +22,10 @@ age = Number("Любая строка вместо числа");
 
 console.log(age); // NaN, conversion failed
 
-console.log( Number("   123   ") ); // 123
-console.log( Number("123z") );      // NaN (error reading a number at "z"))
-console.log( Number(true) );        // 1
-console.log( Number(false) );       // 0
+console.log(Number("   123   ")); // 123
+console.log(Number("123z")); // NaN (error reading a number at "z"))
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
 
 
 
@@ -38,11 +38,11 @@ console.log( Number(false) );       // 0
 
 //Boolean Conversion
 
-console.log( Boolean(1) ); // true
-console.log( Boolean(0) ); // false
+console.log(Boolean(1)); // true
+console.log(Boolean(0)); // false
 
-console.log( Boolean("Hello!") ); // true
-console.log( Boolean("") ); // false
+console.log(Boolean("Hello!")); // true
+console.log(Boolean("")); // false
 
 
-console.log(a=3+4);
+console.log(a = 3 + 4);

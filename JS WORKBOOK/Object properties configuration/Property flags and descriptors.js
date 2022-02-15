@@ -1,30 +1,30 @@
 let user = {
     name: "John"
-  };
-  
-  let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
-  
-  console.log( JSON.stringify(descriptor, null, 2 ) );
-  /* property descriptor:
-  {
-    "value": "John",
-    "writable": true,
-    "enumerable": true,
-    "configurable": true
-  }
-  */
+};
+
+let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+
+console.log(JSON.stringify(descriptor, null, 2));
+/* property descriptor:
+{
+  "value": "John",
+  "writable": true,
+  "enumerable": true,
+  "configurable": true
+}
+*/
 
 
 
 user = {};
 
 Object.defineProperty(user, "name", {
-  value: "John"
+    value: "John"
 });
 
 descriptor = Object.getOwnPropertyDescriptor(user, 'name');
 
-alert( JSON.stringify(descriptor, null, 2 ) );
+alert(JSON.stringify(descriptor, null, 2));
 /*
 {
   "value": "John",
@@ -39,27 +39,13 @@ alert( JSON.stringify(descriptor, null, 2 ) );
 
 user = {
     name: "John"
-  };
-  
-  Object.defineProperty(user, "name", {
+};
+
+Object.defineProperty(user, "name", {
     writable: false
-  });
-  
-  user.name = "Pete"; // Error: Cannot assign to read only property 'name'
-  
+});
 
-
-
-
-user = {
-    name: "John",
-    toString() {
-      return this.name;
-    }
-  };
-  
-  // By default, both our properties are listed:
-  for (let key in user) alert(key); // name, toString
+user.name = "Pete"; // Error: Cannot assign to read only property 'name'
 
 
 
@@ -68,51 +54,65 @@ user = {
 user = {
     name: "John",
     toString() {
-      return this.name;
+        return this.name;
     }
-  };
-  
-  Object.defineProperty(user, "toString", {
+};
+
+// By default, both our properties are listed:
+for (let key in user) alert(key); // name, toString
+
+
+
+
+
+user = {
+    name: "John",
+    toString() {
+        return this.name;
+    }
+};
+
+Object.defineProperty(user, "toString", {
     enumerable: false
-  });
-  
-  // Now our toString disappears:
-  for (let key in user) alert(key); // name
+});
+
+// Now our toString disappears:
+for (let key in user) alert(key); // name
 
 
 
-  let user = {
+let user = {
     name: "John"
-  };
-  
-  Object.defineProperty(user, "name", {
+};
+
+Object.defineProperty(user, "name", {
     writable: false,
     configurable: false
-  });
-  
-  // won't be able to change user.name or its flags
-  // all this won't work:
-  user.name = "Pete";
-  delete user.name;
-  Object.defineProperty(user, "name", { value: "Pete" });
+});
+
+// won't be able to change user.name or its flags
+// all this won't work:
+user.name = "Pete";
+delete user.name;
+Object.defineProperty(user, "name", { value: "Pete" });
 
 
 
 
 
-  Object.defineProperties(obj, {
+Object.defineProperties(obj, {
     prop1: descriptor1,
     prop2: descriptor2
-    // ...
-  });
+        // ...
+});
 
 
 
-  Object.defineProperties(user, {
+Object.defineProperties(user, {
     name: { value: "John", writable: false },
     surname: { value: "Smith", writable: false },
     // ...
-  });
+});
 
 
 

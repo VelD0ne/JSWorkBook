@@ -3,7 +3,7 @@ let message = 'Hello!'; // define the variable and assign the value
 
 message = 'Hello'; // store the string 'Hello' in the variable named
 message = 'World!'; // value changed
-console.log(message);// shows the variable content
+console.log(message); // shows the variable content
 
 
 // Examples of incorrect variable names:
