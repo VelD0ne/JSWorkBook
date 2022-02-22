@@ -24,7 +24,7 @@ Object.defineProperty(user, "name", {
 
 descriptor = Object.getOwnPropertyDescriptor(user, 'name');
 
-alert(JSON.stringify(descriptor, null, 2));
+console.log(JSON.stringify(descriptor, null, 2));
 /*
 {
   "value": "John",
@@ -59,7 +59,7 @@ user = {
 };
 
 // By default, both our properties are listed:
-for (let key in user) alert(key); // name, toString
+for (let key in user) console.log(key); // name, toString
 
 
 
@@ -77,11 +77,11 @@ Object.defineProperty(user, "toString", {
 });
 
 // Now our toString disappears:
-for (let key in user) alert(key); // name
+for (let key in user) console.log(key); // name
 
 
 
-let user = {
+user = {
     name: "John"
 };
 
@@ -100,11 +100,11 @@ Object.defineProperty(user, "name", { value: "Pete" });
 
 
 
-Object.defineProperties(obj, {
-    prop1: descriptor1,
-    prop2: descriptor2
-        // ...
-});
+// Object.defineProperties(obj, {
+//     prop1: descriptor1,
+//     prop2: descriptor2
+//         // ...
+// });
 
 
 
