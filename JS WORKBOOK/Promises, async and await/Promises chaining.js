@@ -90,5 +90,5 @@ function loadJson(url) {
   loadJson('/article/promise-chaining/user.json')
     .then(user => loadGithubUser(user.name))
     .then(showAvatar)
-    .then(githubUser => alert(`Finished showing ${githubUser.name}`));
+    .then(githubUser => console.log(`Finished showing ${githubUser.name}`));
     // ...
