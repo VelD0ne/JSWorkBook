@@ -86,19 +86,19 @@ let arrayLike = { // has indexes and length => array-like
   for (let item of arrayLike) {}
 
 
-  let arrayLike = {
+  arrayLike = {
     0: "Hello",
     1: "World",
     length: 2
   };
   
-  let arr = Array.from(arrayLike); // (*)
-  alert(arr.pop()); // World (method works)
+  arr = Array.from(arrayLike); // (*)
+  console.log(arr.pop()); // World (method works)
 
 
   // assuming that range is taken from the example above
 
 // square each number
-let arr = Array.from(range, num => num * num);
+arr = Array.from(range, num => num * num);
 
-alert(arr); // 1,4,9,16,25
+console.log(arr); // 1,4,9,16,25

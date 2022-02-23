@@ -19,17 +19,17 @@ console.log(y - x); // 2, binary minus subtracts values
 
 
 
-alert(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
-alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
+console.log(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
+console.log(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 
 let s = "my" + "string";
-alert(s); // mystring
+console.log(s); // mystring
 
-alert('1' + 2); // "12"
-alert(2 + '1'); // "21"
+console.log('1' + 2); // "12"
+console.log(2 + '1'); // "21"
 
-alert(6 - '2'); // 4, converts '2' to a number
-alert('6' / '2'); // 3, converts both operands to numbers
+console.log(6 - '2'); // 4, converts '2' to a number
+console.log('6' / '2'); // 3, converts both operands to numbers
 
 // No effect on numbers
 let x = 1;
@@ -47,7 +47,7 @@ console.log(+""); // 0
 apples = "2";
 oranges = "3";
 
-alert(apples + oranges); // "23", the binary plus concatenates strings
+console.log(apples + oranges); // "23", the binary plus concatenates strings
 
 
 //If we want to treat them as numbers, we need to convert and then sum them:
@@ -59,7 +59,7 @@ let oranges = "3";
 console.log(+apples + +oranges); // 5
 
 // the longer variant
-// alert( Number(apples) + Number(oranges) ); // 5
+// console.log( Number(apples) + Number(oranges) ); // 5
 
 /*
 Precedence	    Name	        Sign

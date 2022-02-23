@@ -9,7 +9,7 @@ new Promise((resolve, reject) => {
     if (error instanceof URIError) {
       // handle it
     } else {
-      alert("Can't handle such error");
+      console.log("Can't handle such error");
   
       throw error; // throwing this or another error jumps to the next catch
     }
@@ -18,7 +18,7 @@ new Promise((resolve, reject) => {
     /* doesn't run here */
   }).catch(error => { // (**)
   
-    alert(`The unknown error has occurred: ${error}`);
+    console.log(`The unknown error has occurred: ${error}`);
     // don't return anything => execution goes the normal way
   
   });
@@ -28,8 +28,8 @@ new Promise((resolve, reject) => {
 
   window.addEventListener('unhandledrejection', function(event) {
     // the event object has two special properties:
-    alert(event.promise); // [object Promise] - the promise that generated the error
-    alert(event.reason); // Error: Whoops! - the unhandled error object
+    console.log(event.promise); // [object Promise] - the promise that generated the error
+    console.log(event.reason); // Error: Whoops! - the unhandled error object
   });
   
   new Promise(function() {

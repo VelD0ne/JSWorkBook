@@ -84,4 +84,4 @@ typeof Math // "object"  (1)
 
 typeof null // "object"  (2)
 
-typeof alert // "function"  (3)
+typeof console.log // "function"  (3)
