@@ -14,7 +14,7 @@ let group = {
 
 
 
-  let group = {
+  group = {
     title: "Our Group",
     students: ["John", "Pete", "Alice"],
   
